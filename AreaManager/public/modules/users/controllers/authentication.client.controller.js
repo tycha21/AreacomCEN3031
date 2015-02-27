@@ -11,7 +11,6 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 			$http.post('/auth/signup', $scope.credentials).success(function(response) {
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
-				console.log(response);
 
 				// And redirect to the index page
 				$location.path('/');
@@ -19,16 +18,6 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.error = response.message;
 			});
 		};
-		// $scope.deleteButton = true;
-		// $scope.CreateAdmin = function(){
-		// 	$scope.credentials.username = "areacommunication";
-		// 	$scope.creadentials.password = "12345";
-		// 	$scope.creadentials.roles = "admin"; 
-		// 	$scope.signup();
-		// 	$scope.creadentials = {};
-		// 	$scope.deleteButton = false;
-
-		// };
 
 		$scope.signin = function() {
 			$http.post('/auth/signin', $scope.credentials).success(function(response) {
@@ -36,7 +25,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('/main');
+				$location.path('/');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
