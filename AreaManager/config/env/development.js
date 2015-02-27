@@ -1,24 +1,9 @@
 'use strict';
 
 module.exports = {
-	db: {
-		uri: 'mongodb://acomadmin:coma3031@ds050087.mongolab.com:50087/areacom',
-		options: {
-			user: '',
-			pass: ''
-		}
-	},
-	log: {
-		// Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
-		format: 'dev',
-		// Stream defaults to process.stdout
-		// Uncomment to enable logging to a log on the file system
-		options: {
-			//stream: 'access.log'
-		}
-	},
+	db: 'mongodb://localhost/mean-dev',
 	app: {
-		title: 'MEAN.JS - Development Environment'
+		title: 'MEAN - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
